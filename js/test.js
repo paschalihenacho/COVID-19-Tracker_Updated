@@ -1,12 +1,4 @@
-    
-    // var settings = {
-    //     "url": "https://coronavirus-monitor-v2.p.rapidapi.com/coronavirus/cases_by_days_by_country.php?country=%3Crequired%3E",
-    //     "method": "GET",
-    //     "headers": {
-    //         "x-rapidapi-host": "coronavirus-monitor-v2.p.rapidapi.com",
-    //         "x-rapidapi-key": "409edfd192msh76f5ae7cd381374p17ad34jsn668e30d41ee5"
-	//     }
-	/* ---------------------------------------------- */
+/* ---------------------------------------------- */
 /*            CODE EXPLAINED TUTORIALS            */
 /*         www.youtube.com/CodeExplained          */
 /* ---------------------------------------------- */
@@ -52,7 +44,7 @@ function getData(user_country){
 		"method": "GET",
 		"headers": {
 			"x-rapidapi-host": "covid19-monitor-pro.p.rapidapi.com",
-			"x-rapidapi-key": "409edfd192msh76f5ae7cd381374p17ad34jsn668e30d41ee5"
+			"x-rapidapi-key": "7e269ec140msh8a5df9cfc21b4b4p1c1e3ejsn9aba26afc6e0"
 		}
 	})
 	.then( response => {
@@ -75,10 +67,9 @@ function getData(user_country){
 		updateUI();
 	})
 
-	
 }
-getData(user_country);
 
+getData(user_country);
 
 // UPDATE UI FUNCTION
 function updateUI(){
@@ -117,8 +108,8 @@ function axesLinearChart(){
 				label: 'Cases',
 				data: cases_list,
 				fill : false,
-				borderColor : '#FFF',
-				backgroundColor: '#FFF',
+				borderColor : '#2196f3',
+				backgroundColor: '#2196f3',
 				borderWidth : 1
 			},{
 				label: 'Recovered',
@@ -145,10 +136,10 @@ function axesLinearChart(){
 }
 
 // FORMAT DATES
-// const monthsNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const monthsNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-// function formatDate(dateString){
-// 	let date = new Date(dateString);
+function formatDate(dateString){
+	let date = new Date(dateString);
 
-// 	return `${date.getDate()} ${monthsNames[date.getMonth()]}`;
-// }
+	return `${date.getDate()} ${monthsNames[date.getMonth()]}`;
+}
